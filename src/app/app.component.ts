@@ -14,12 +14,9 @@ export class AppComponent implements OnInit {
     { label: "Products", routerLink: "/products" }
   ];
 
-  constructor(private primengConfig: PrimeNGConfig, private messageService: MessageService) { }
+  constructor(private primengConfig: PrimeNGConfig) { }
 
   ngOnInit() {
     this.primengConfig.ripple = true;
-    this.messageService.add({key: "msg", severity:'success', summary: 'Summary Text 1', detail: 'Detail Text'})
-    this.messageService.add({key: "msg", severity:'success', summary: 'Summary Text 2', detail: 'Detail Text'})
-    this.messageService.add({key: "msg", severity:'success', summary: 'Summary Text 3', detail: 'Detail Text'})
   }
 }
